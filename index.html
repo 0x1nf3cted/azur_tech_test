@@ -10,7 +10,6 @@
 <body>
     <nav class="nav-container">
         <div class="nav-content">
-            <!-- lien vers autres  pages -->
             <a href="index.html" class="nav-link active">Feed</a>
             <a href="messages.html" class="nav-link">Messages</a>
             <a href="friends.html" class="nav-link">Amis</a>
@@ -22,7 +21,6 @@
             <textarea placeholder="Quoi de neuf ?" class="post-input"></textarea>
             <div class="post-actions">
                 <input type="file" class="photo-input" style="display: none;" accept="image/*">
-                <!-- placeholder temporaire de l'image séléctionné -->
                 <img class="preparing-image hidden-img" src="" alt="">
                 <div class="button-group">
                     <button class="btn-photo">
@@ -36,7 +34,8 @@
     </section>
  
     
-    <!-- code template pour les posts du feed -->
+
+    <!-- template d'un post -->
     <template id="post-template">
         <div class="post">
             <div class="post-header">
@@ -49,6 +48,7 @@
                     <img class="post-image" src="" alt="Post Image">
                 </div>
             </div>
+            <!-- les réactions d'un post -->
             <div class="reactions">
                 <button class="like-btn">👍 <span class="count">0</span></button>
                 <button class="dislike-btn">👎 <span class="count">0</span></button>
@@ -56,16 +56,14 @@
             </div>
             <div class="comments-section">
                 <input type="text" placeholder="Ajouter un commentaire..." class="comment-input">
-                <button class="btn-comment">Comment</button>
+                <button class="btn-comment">publier</button>
                 <div class="comments-container"></div>
             </div>
         </div>
     </template>
     
-    <!-- le script seed c'est pour simuler une base de donnée en utilisant localstorage -->
     <script src="js/seed.js"></script>
 
-    <!-- contient le code js pour la page de feed -->
     <script src="js/feed.js"></script>
 </body>
 </html>

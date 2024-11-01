@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation - Mini Réseau Social</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/conversation.css">
+</head>
+<body>
+    <main class="main-container conversation-layout">
+        <header class="conversation-header">
+            <img src="" alt="" class="contact-picture">
+            <div class="contact-info">
+                <h2 class="contact-name"></h2>
+                <span class="contact-status">En ligne</span>
+            </div>
+        </header>
+        <div class="messages-container" id="messages-container">
+            <!-- les messages de la conversations seront affiché ici -->
+        </div>
+        <footer class="message-input-container">
+            <input type="text" class="message-input" placeholder="Écrivez votre message...">
+            <button class="send-message-btn">Envoyer</button>
+        </footer>
+    </main>
+
+    <!-- template d'un message -->
+    <template id="message-template">
+        <div class="message">
+            <div class="message-content">
+                <p class="message-text"></p>
+                <span class="message-time"></span>
+            </div>
+        </div>
+    </template>
+
+    <script src="js/conversations.js"></script>
+</body>
+</html>
