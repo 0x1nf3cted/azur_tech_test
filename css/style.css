@@ -1,4 +1,4 @@
-/* style.css */
+style.css
 :root {
     --primary-color: #6c5ce7;
     --bg-color: #e0e5ec;
@@ -59,3 +59,4 @@ body {
     margin: 80px auto 0;
     padding: 1rem;
 }
+

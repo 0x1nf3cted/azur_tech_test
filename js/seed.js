@@ -55,28 +55,91 @@ const conversationsData = [
 
 // liste des messages d'une conversation
 const messagesData = [
-    { id: 1, conversationId: 1, text: "Salut!", time: "10:30 AM", senderId: 1 }, // From John Pork
-    { id: 2, conversationId: 1, text: "Bonjour, comment ça va ?", time: "10:32 AM", senderId: 3 }, // From Sophie Martin
-    { id: 3, conversationId: 2, text: "Bonjour, Quandale!", time: "10:33 AM", senderId: 1 }, // From John Pork
-    { id: 4, conversationId: 2, text: "À bientôt!", time: "10:34 AM", senderId: 2 }, // From Quandale Dingle
+    { id: 1, conversationId: 1, text: "Salut!", time: "10:30 AM", senderId: 1 }, 
+    { id: 2, conversationId: 1, text: "Bonjour, comment ça va ?", time: "10:32 AM", senderId: 3 }, 
+    { id: 3, conversationId: 2, text: "Bonjour, Quandale!", time: "10:33 AM", senderId: 1 }, 
+    { id: 4, conversationId: 2, text: "À bientôt!", time: "10:34 AM", senderId: 2 }, 
 ];
 
+const postsData = [
+    {
+        id: 1,
+        text: "Ceci est mon premier post !",
+        author: "John Pork",
+        time: new Date().toLocaleTimeString(),
+        media: "assets/post1.png", 
+        comments: [],
+        like: 0,
+        liked: false,
+        dislike: 0,
+        disliked: false,
+        heart: 0,
+        hearted: false 
+    },
+    {
+        id: 2,
+        text: "Quel beau jour aujourd'hui !",
+        author: "Sophie Martin",
+        time: new Date().toLocaleTimeString(),
+        media: "assets/post2.png",
+        comments: [],
+
+        like: 0,
+        liked: false,
+        dislike: 0,
+        disliked: false,
+        heart: 0,
+        hearted: false
+    },
+    {
+        id: 3,
+        text: "Avez-vous vu le dernier film ?",
+        author: "Emma Rodriguez",
+        time: new Date().toLocaleTimeString(),
+        media: "",
+        comments: [],
+
+        like: 0,
+        liked: false,
+        dislike: 0,
+        disliked: false,
+        heart: 0,
+        hearted: false
+    },
+    {
+        id: 4,
+        text: "Prêt pour le week-end !",
+        author: "Lucas Bernard",
+        time: new Date().toLocaleTimeString(),
+        media: "assets/post3.png",
+        comments: [],
+
+        like: 0,
+        liked: false,
+        dislike: 0,
+        disliked: false,
+        heart: 0,
+        hearted: false
+    },
+];
 
 // fonction de seed, pour remplir le localstorage
 function seedData() {
     // l'opération de seed doit etre fait une fois que l'application est dépolyé, et pas à chaque modification
     if (!localStorage.getItem("seedScriptRun")) {
+
         // liste des amis
         localStorage.setItem('friends', JSON.stringify(friendsData));
 
         // listes des conversations 
         localStorage.setItem('conversations', JSON.stringify(conversationsData));
 
-
         // liste des messages
         localStorage.setItem('messages', JSON.stringify(messagesData));
 
-        
+        // liste des postes
+        localStorage.setItem('posts', JSON.stringify(postsData)); 
+
         // cette variable indique c'est le seed est fait
         localStorage.setItem("seedScriptRun", "true");
         console.log("Data crée.");
