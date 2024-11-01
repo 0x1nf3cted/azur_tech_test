@@ -9,11 +9,59 @@ const friendsData = [
 ];
 
 
+
+const conversationsData = [
+    {
+        id: 1,
+        friendId: 1, // Foreign key
+        name: "John Pork",
+        status: "En ligne",
+        lastMessage: "Salut!",
+        lastMessageTime: "10:45",
+        picture: "/api/placeholder/50/50",
+        messages: [
+            { text: "Salut!", time: "10:00", senderId: 1 }, 
+            { text: "Comment ça va ?", time: "10:02", senderId: 3 }, 
+        ],
+    },
+    {
+        id: 2,
+        friendId: 2,  
+        name: "Quandale Dingle",
+        status: "Hors ligne",
+        lastMessage: "À bientôt",
+        lastMessageTime: "Hier",
+        picture: "/api/placeholder/50/50",
+        messages: [
+            { text: "Bonjour Bob", time: "09:30", senderId: 2 },  
+            { text: "À bientôt", time: "09:45", senderId: 2 }, 
+        ],
+    },
+    {
+        id: 3,
+        friendId: 3,  
+        name: "Sophie Martin",
+        status: "En ligne",
+        lastMessage: "À bientôt!",
+        lastMessageTime: "Aujourd'hui",
+        picture: "/api/placeholder/50/50",
+        messages: [
+            { text: "Salut!", time: "10:00", senderId: 3 }, 
+            { text: "Comment ça va ?", time: "10:02", senderId: 4 }, 
+        ],
+    },
+];
+
+
 // fonction de seed, pour remplir le localstorage
 function seedData() {
     // l'opération de seed doit etre fait une fois que l'application est dépolyé, et pas à chaque modification
     if (!localStorage.getItem("seedScriptRun")) {
+        // liste des amis
         localStorage.setItem('friends', JSON.stringify(friendsData));
+
+        // listes des conversations 
+        localStorage.setItem('conversations', JSON.stringify(conversationsData));
 
         // cette variable indique c'est le seed est fait
         localStorage.setItem("seedScriptRun", "true");
