@@ -1,0 +1,61 @@
+/* style.css */
+:root {
+    --primary-color: #6c5ce7;
+    --bg-color: #e0e5ec;
+    --text-color: #2d3436;
+    --shadow-light: #ffffff;
+    --shadow-dark: rgba(163, 177, 198, 0.6);
+    --radius: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navigation */
+.nav-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+}
+
+.nav-link.active {
+    background: var(--bg-color);
+    box-shadow: inset 5px 5px 10px var(--shadow-dark),
+                inset -5px -5px 10px var(--shadow-light);
+}
+
+/* Main Container */
+.main-container {
+    max-width: 800px;
+    margin: 80px auto 0;
+    padding: 1rem;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amis - Mini Réseau Social</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/neumorphism.css">
+    <link rel="stylesheet" href="css/friends.css">
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="nav-content">
+            <a href="index.html" class="nav-link">Feed</a>
+            <a href="messages.html" class="nav-link">Messages</a>
+            <a href="friends.html" class="nav-link active">Amis</a>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <section class="friends-section">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Rechercher un ami...">
+            </div>
+            
+            <div class="friends-list" id="friends-list">
+                <!-- Les amis seront ajouté ici -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Template pour un ami -->
+    <template id="friend-template">
+        <div class="friend-item" draggable="true">
+            <img src="" alt="" class="friend-picture">
+            <div class="friend-info">
+                <h3 class="friend-name"></h3>
+                <span class="friend-status"></span>
+                <span class="mutual-friends"></span>
+            </div>
+            <div class="friend-actions">
+                <button class="message-btn">Message</button>
+            </div>
+        </div>
+    </template>
+
+
+    <script src="js/friends.js"></script>
+</body>
+</html>
