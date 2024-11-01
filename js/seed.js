@@ -1,11 +1,11 @@
 // liste des amis (hard coded)
 
 const friendsData = [
-    { id: 1, name: "John Pork", status: "online", mutual: 12, picture: "assets/img1.png" },
-    { id: 2, name: "Quandale Dingle", status: "offline", mutual: 8, picture: "assets/img2.png" },
-    { id: 3, name: "Sophie Martin", status: "online", mutual: 15, picture: "assets/img3.png" },
-    { id: 4, name: "Lucas Bernard", status: "idle", mutual: 5, picture: "assets/img4.png" },
-    { id: 5, name: "Emma Rodriguez", status: "online", mutual: 20, picture: "assets/img5.png" }
+    { id: 1, name: "John Pork", status: "online", mutual: 12, picture: "assets/img1.jpg" },
+    { id: 2, name: "Quandale Dingle", status: "offline", mutual: 8, picture: "assets/img2.jpg" },
+    { id: 3, name: "Sophie Martin", status: "online", mutual: 15, picture: "assets/img3.jpg" },
+    { id: 4, name: "Lucas Bernard", status: "idle", mutual: 5, picture: "assets/img4.jpg" },
+    { id: 5, name: "Emma Rodriguez", status: "online", mutual: 20, picture: "assets/img5.jpg" }
 ];
 
 
