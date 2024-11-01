@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - Mini Réseau Social</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/neumorphism.css">
+    <link rel="stylesheet" href="css/messages.css">
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="nav-content">
+            <a href="index.html" class="nav-link">Feed</a>
+            <a href="messages.html" class="nav-link active">Messages</a>
+            <a href="friends.html" class="nav-link">Amis</a>
+        </div>
+    </nav>
+
+    <main class="main-container messages-layout">
+        <!-- Liste des conversations -->
+        <section class="conversations-list">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Rechercher une conversation...">
+            </div>
+            <div class="conversations-container">
+                <!-- Les conversations seront ajoutés ici -->
+            </div>
+        </section>
+
+        <!-- Zone de conversation -->
+        <section class="conversation-area">
+            <div class="conversation-empty">
+            </div>
+            <div class="conversation-content" style="display: none;">
+                <header class="conversation-header">
+                    <img src="" alt="" class="contact-picture">
+                    <div class="contact-info">
+                        <h2 class="contact-name"></h2>
+                        <span class="contact-status"></span>
+                    </div>
+                </header>
+                <div class="messages-container">
+                    <!-- Les messages seront injectés ici -->
+                </div>
+                <footer class="message-input-container">
+                    <input type="text" class="message-input" placeholder="Écrivez votre message...">
+                    <button class="send-message-btn">Envoyer</button>
+                </footer>
+            </div>
+        </section>
+    </main>
+
+    <!-- Template pour une conversation -->
+    <template id="conversation-template">
+        <div class="conversation-item">
+            <img src="" alt="" class="contact-picture">
+            <div class="conversation-info">
+                <div class="conversation-header">
+                    <h3 class="contact-name"></h3>
+                    <span class="last-message-time"></span>
+                </div>
+                <p class="last-message"></p>
+            </div>
+            <div class="unread-badge">0</div>
+        </div>
+    </template>
+
+    <!-- Template pour un message -->
+    <template id="message-template">
+        <div class="message">
+            <div class="message-content">
+                <p class="message-text"></p>
+                <span class="message-time"></span>
+            </div>
+        </div>
+    </template>
+
+    <script src="js/messages.js"></script>
+</body>
+</html>
